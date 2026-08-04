@@ -26,7 +26,7 @@ const SocialProof = (props: SocialProofProps ) => {
                 </div>
 
                 {/* TestimonyCards */}
-                <div className="grid gap-4 w-full">
+                <div className="grid gap-4 w-full grid-cols-1">
                     {props.testimony.map((card:TestimonyCardProps) => (
                             
                             <TestimonyCard key={card.id} {...card} />
