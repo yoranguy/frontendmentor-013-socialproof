@@ -13,10 +13,10 @@ const SocialProof = (props: SocialProofProps ) => {
 
     return ( 
         <>
-            <div className=" grid grid-cols-1 gap-4 justify-center items-center w-[375px] p-[20px] sm:grid-cols-[400px_1] sm:gap-20 sm:w-[1110px] sm:p-0">
+            <div className=" grid grid-cols-1 gap-4 justify-center items-center w-[375px] p-[20px] sm:grid-cols-[400px_1fr] sm:gap-20 sm:w-[1110px] sm:p-0">
                     
                  {/* header */}
-                <div className="grid grid-row-1 gap-8 sm:w-[400px]"> 
+                <div className="grid grid-rows-1 gap-8 sm:w-[400px]"> 
                     <div className=" text-center text-[hsl(300,43%,22%)] text-4xl/8 tracking-tight font-bold sm:text-6xl sm:text-start sm:leading-14">
                         {props.title}
                     </div>
