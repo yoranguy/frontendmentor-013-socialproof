@@ -35,7 +35,7 @@ const SocialProof = (props: SocialProofProps ) => {
                 </div>
 
                 {/* ReviewCards */}
-                <div className="grid gap-4 w-full sm:grid-cols-3 sm:col-span-2 sm:gap-8" > 
+                <div className="grid gap-4 w-full sm:grid-cols-3 sm:row-span-2 sm:gap-8" > 
                     {props.review.map((card:ReviewCardProps) => (
                             <ReviewCard key={card.id} {...card} />
                         ))}
