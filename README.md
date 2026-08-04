@@ -51,7 +51,7 @@ Desktop:
 ### Links
 
 - Solution URL: [https://github.com/yoranguy/frontendmentor-013-socialproof](https://github.com/yoranguy/frontendmentor-013-socialproof)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://yoranguy-frontendmentor-socialproof.vercel.app/](https://yoranguy-frontendmentor-socialproof.vercel.app/)
 
 ## My process
 
@@ -73,6 +73,7 @@ Desktop:
 **Task:** To add stars to the rating `<div>`
 
 **Action:** My through process was to add a function to add starts to the `div` element.
+
 ```tsx 
 const tokensArray = Array.from({length: props.noOfToken});
 
@@ -97,6 +98,7 @@ const tokensArray = Array.from({length: props.noOfToken});
 **Result:** This has result no starts being displayed. Then I thought, the `<div>` element with the id  hasn't been created to add the img element into the HTML.
 
 ##### Next approach
+
 **Situation:** Find a way to the loop the number of time specified based in the data in the json file to when rendering the component.
 
 **Task:** To loop during rendering the component.
@@ -134,6 +136,7 @@ This method is it capitalize the first letter of the word/string.
 ##### Part 1: Declare in a .d.ts file:
 
 File Location: ./src/types/string.d.ts
+
 ```ts
 interface String {
   toCapitalize(): string;
@@ -141,6 +144,7 @@ interface String {
 ```
 
 Part 2: Implement
+
 File Location: ./src/utils/stringExtensions.ts
 ```ts
 String.prototype.toCapitalize = function (): string {
@@ -153,6 +157,7 @@ String.prototype.toCapitalize = function (): string {
 Part 3: Import
 
 Example File Location: ./src/features/components/ 
+
 ```ts
 import '../../utils/stringExtensions';
 ```
@@ -160,6 +165,7 @@ import '../../utils/stringExtensions';
 ---
 
 #### Scenario 3: Layout
+
 **Situation:** When mobile version was complete, the next step was to create the desktop version.
 
 **Task:** To create a layout where the top row has 2 areas and bottom row takes 2 areas
@@ -171,6 +177,7 @@ i.e., [ 1 ][ 2 ]
 **Result:** I couldn't find a way to do this.
 
 ##### Next approach
+
 **Situation:** Unable to create the layout with flexbox, attempting to use gridbox
 
 **Task:** Research/Relearn gridbox and achieve the layout
@@ -181,7 +188,9 @@ i.e., [ 1 ][ 2 ]
 
 
 #### Scenario 4: Creating variables in styles to be used in className
+
 Example:
+
 ```tsx
 
 <div className="flex flex-col flex-nowrap gap-6 pt-[45px] pb-[40px] pl-[35px] pr-[35px] bg-[hsl(300,43%,22%)] rounded-md sm:mt-('--mt-desktop)" style={{'--mt-desktop':`${marginBase * props.id}px`}as React.CSSProperties}>
@@ -189,7 +198,9 @@ Example:
 ```
 
 #### Scenario 5: Displaying multiple backgrounds
+
 Example:
+
 ```tsx
 <div className="min-h-screen w-screen flex flex-col flex-wrap gap-6 justify-center items-center bg-[hsl(139, 44%, 93%)] bg-scroll bg-no-repeat bg-position-[top_0dvh_left_0dvw,bottom_0dvh_right_0dvh] bg-[image:var(--bg-mobile)] md:bg-[image:var(--bg-desktop)]" style={{'--bg-desktop': `url('/images/bg-pattern-top-desktop.svg'),url('/images/bg-pattern-bottom-desktop.svg')`,'--bg-mobile': `url('/images/bg-pattern-top-mobile.svg'),url('/images/bg-pattern-bottom-mobile.svg')`
 ```
